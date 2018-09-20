@@ -1,0 +1,253 @@
+/*********************************************************
+ *                        TAGS CSS                       *
+ *********************************************************/
+body {
+	height: 98vh;
+	width: 100vw;
+	font-family: "Montserrat";
+	color: grey;
+}
+
+@font-face {
+    font-family: "PathCustom";
+    src: url("webfont.ttc");
+}
+
+/*********************************************************
+ *                          ID CSS                       *
+ *********************************************************/
+
+#content {
+	display: inline-block;
+	height: 100%;
+	width: 80%;
+}
+
+#places {
+	height: 50%;
+	width: 95%;
+	min-width: 1128px;
+	min-height: 482px;
+	margin-left: 4%;
+	padding-left: 1%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+#plus-button {
+	display: inline-block;
+	width: 2vw;
+}
+
+#searchbar {
+	height: 4vh;
+	width: 20vw;
+	min-width: 315px;
+	min-height: 40px;
+	font-family: "Montserrat";
+	font-size: calc(12px + 0.5vw);
+	margin-top: 2%;
+	margin-left: 3vw; 
+	padding-left: 1vw;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px 1px rgba(199,199,199,1);
+	border: none;
+	transition: ease-out 0.5s;
+}
+
+#searchbar:hover {
+	box-shadow: 0px 0px 20px 1px rgba(199,199,199,1);
+	transition: ease-out 0.5s;
+}
+
+#searchbar:focus {
+	outline: 0;
+	box-shadow: 0px 0px 50px 1px rgba(199,199,199,1);
+	transition: ease-out 0.5s;
+}
+
+#sidebar {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	left: 0;
+	margin-top: -5px;
+	margin-left: -5px;
+	height: 101%;
+	width: 18%;
+	border-radius: 0px 10px 10px 0px;
+	box-shadow: 5px 0px 10px 1px rgba(199,199,199,1);
+}
+
+#sidebar-title {
+	display: inline-block;
+	font-family: "PathCustom";
+	font-size: 3vw;
+    color: #002BDB;
+    margin-top: 5%;
+    margin-bottom: 30%;
+    padding-top: 0%;
+}
+
+#yourplaces-title {
+	display: inline-block;
+	font-family: "Montserrat";
+	color: black;
+	font-weight: bold;
+	margin-left: 5%;
+	margin-top: 10%;
+}
+
+/*********************************************************
+ *                       CLASS CSS                       *
+ *********************************************************/
+
+.placecard {
+	font-family: "PathCustom";
+	color: white;
+	font-size: 35px;
+	display: inline-block;
+	text-align: center;
+	height: 35vh;
+	width: 12vw;
+	min-width: 230px;
+	min-height: 350px;
+	left: 10000000px;
+	border-radius: 10px;
+	padding-top: 2%;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+	box-shadow: 0px 0px 10px 1px rgba(199,199,199,1);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: ease-out 0.5s;
+	animation: 2s ease-out 0s 1 slideInFromRight;
+}
+
+.placecard:hover {
+	box-shadow: 1px 5px 15px 5px rgb(152, 147, 147);
+	transition: ease-out 0.5s;
+}
+
+.side-nav-bar {
+	font-family: "Montserrat";
+	font-size: calc(18px + 0.3vw);
+	color: grey;
+	margin-top: 3vh;
+	transition: ease-out 0.5s;
+}
+
+.side-nav-bar:hover {
+	color: #002BDB;
+	transition: ease-out 0.5s;
+}
+
+/*********************************************************
+ *                   MEDIA SPECIFIC CSS                  *
+ *********************************************************/
+
+@media screen and (orientation: portrait) {
+	.placecard {
+		font-size: calc(50px + 6vw);
+		width: 90%;
+		height: 90%;
+	}
+	#places {
+		height: 90%;
+	}
+
+	#searchbar {
+		width: 70vw;
+		height: 6vh;
+		font-size: calc(24px + 0.5vw);
+		padding-left: 3vw;
+	}
+
+	#sidebar {
+		display: inline-block;
+		margin-top: 1vh;
+		margin-left: 2vh;
+		height: 10vh;
+		width: 114vw;
+		left: 0;
+		top: 0;
+		box-shadow: 1px 0px 10px 1px rgba(199,199,199,1);
+		border-radius: 10px;
+	}
+
+	#sidebar-title {
+		margin-top: 2vh;
+		margin-left: 0;
+		font-size: calc(50px + 0.5vw);
+	}
+
+	.side-nav-bar {
+		display: inline-block;
+		font-size: calc(24px + 0.5vw);
+		margin-left: 2vh;
+	}
+
+	#yourplaces-title {
+		font-size: calc(25px + 4vw);
+		margin-top: 2vh;
+	}
+
+}
+
+/*********************************************************
+ *                      ANIMATIONS                       *
+ *********************************************************/
+
+ @keyframes slideInFromRight {
+    0% {
+        transform: translateX(500%);
+        box-shadow: 1px 5px 15px 5px rgb(152, 147, 147);
+    }
+    100% {
+        transform: translateX(0);
+        box-shadow: 0px 0px 10px 1px rgba(199,199,199,1);
+    }
+}
+
+/*********************************************************
+ *                      TEMP STUFF                       *
+ *********************************************************/
+
+#card1 {
+	background-image: url("https://cdn.tourradar.com/s3/tour/original/2401_9c3be8.jpg");
+}
+
+#card2 {
+	background-image: url("https://lonelyplanetimages.imgix.net/a/g/hi/t/1c992b6c01bfdbdb13ad3d204a59036d-victoria.jpg?sharp=10&vib=20&w=1200");
+}
+
+#card3 {
+	background-image: url("http://www.slate.com/content/dam/slate/articles/news_and_politics/roads/2016/04/160414_RK_Berlin.jpg.CROP.promo-xlarge2.jpg");
+}
+
+#card4 {
+	background-image: url("https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5244707255001_5214913279001-vs.jpg?pubId=5104226627001&videoId=5214913279001");
+}
+
+#card5 {
+	background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HbJ1EDbHeix950qa7/france-paris-eiffel-tower-night-2_smnp-tghl_thumbnail-full01.png");
+}
+
+#card6 {
+	background-image: url("https://redox.com/media/1302/aucklandbanner-1920.jpg");
+}
+
+#card7 {
+	background-image: url("https://www.fasken.com/-/media/29b8b6a371344d40a392350b395691d6.ashx");
+}
+
+#card8 {
+	background-image: url("https://secureservercdn.net/427.678.godaddywp.com/wp-content/uploads/statue-of-liberty-horizontal.jpeg");
+}
+
+
+
+
